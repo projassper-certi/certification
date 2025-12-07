@@ -13,7 +13,7 @@ try:
     # (주의: worksheet="시트이름"을 정확히 적어야 합니다)
     
     # 2-1. 관리자(권한) 테이블 읽기
-    df_admin = conn.read(worksheet="admin", usecols=['이름', '기준번호'])
+    df_admin = conn.read(worksheet="1", usecols=['이름', '기준번호'])
     
     # 2-2. 전체 체크리스트 데이터 읽기 (기존 시트 이름이 '시트1'이라면 그대로 둠)
     # worksheet 이름을 안 적으면 첫 번째 시트를 가져옵니다.
