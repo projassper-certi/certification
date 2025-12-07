@@ -18,11 +18,11 @@ try:
     
     # (1) 관리자 시트 읽기 (시트 이름: admin)
     # 혹시 또 에러나면 worksheet="admin" 대신 worksheet=1 로 바꿔보세요.
-    df_admin = conn.read(worksheet="admin", usecols=['이름', '기준번호'])
+    df_admin = conn.read(worksheet=1, usecols=['이름', '기준번호'])
     
     # (2) 설문 데이터 시트 읽기 (시트 이름: 설문데이터)
     # skiprows=1 : 맨 윗줄(<붙임 1>...)을 건너뛰고 진짜 제목줄부터 읽습니다.
-    df_main = conn.read(worksheet="설문데이터", skiprows=1)
+    df_main = conn.read(worksheet=0, skiprows=1)
     
     # (3) 데이터 다듬기
     # '기준번호'가 비어있는 잡다한 줄(행)은 삭제합니다.
